@@ -1,0 +1,26 @@
+veccar=input('Ingrese las coordenadas [x,y,z]=');
+
+x=veccar(1);
+y=veccar(2);
+z=veccar(3);
+
+%Coordenadas cilíndricas
+r=sqrt((x^2)+(y^2));
+theta=atan(y/x);
+thetadeg=rad2deg(theta);
+
+disp('Las coordenadas cilíndricas son [r,thetadeg,z]');
+disp([r,thetadeg,z]);
+    
+
+
+%Coordenadas esféricas
+r1=sqrt((x^2)+(y^2)+(z^2));
+phi=acos(z/r1);
+phideg=rad2deg(phi);
+
+disp('Las coordenadas esféricas son [r1,thetadeg,phideg]');
+disp([r1,thetadeg,phideg]);
+    
+
+

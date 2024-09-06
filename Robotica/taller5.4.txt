@@ -1,0 +1,25 @@
+%ROTACIÓN EN 3D
+Puvw=input('Ingrese las coordenadas iniciales (3D) separadas por coma []: ');%COORDENADAS INICIALES
+Puvw=Puvw';
+theta=input('Ingrese el valor del ángulo theta: ');%ANGULA DE ROTACIÓN CON RESPECTO A Z
+phi=input('Ingrese el valor del ángulo phi: ');%ANGULA DE ROTACIÓN CON RESPECTO A Y
+alpha=input('Ingrese el valor del ángulo alpha: ');%ANGULA DE ROTACIÓN CON RESPECTO A x
+
+%ROTACIÓN EN X
+Rx=[1 0 0;0 cos(alpha) -sin(alpha);0 sin(alpha) cos(alpha)];
+%ROTACIÓN EN Y
+Ry=[cos(phi) 0 sin(phi);0 1 0;-sin(phi) 0 cos(phi)];
+%ROTACIÓN EN Z
+Rz=[cos(theta) -sin(theta) 0;sin(theta) cos(theta) 0;0 0 1];
+
+p1xyz=Rx*Puvw;
+p2xyz=Ry*Puvw;
+p3xyz=Rz*Puvw;
+
+TR=p3xyz*p2xyz*p1xyz;
+disp('Matriz de transformación rotacional final para 3 coordenadas: ');
+disp(TR)
+
+
+
+

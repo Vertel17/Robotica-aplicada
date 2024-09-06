@@ -1,0 +1,16 @@
+Puv=[1;2];
+theta=pi/2;
+R=[cos(theta) -sin(theta);sin(theta) cos(theta)];
+pxy=R*Puv;
+disp('pxy=');
+disp(pxy)
+
+
+
+theta2=pi/4;
+R2=[cos(theta2) -sin(theta2);sin(theta2) cos(theta2)];
+pxy2=R2*Puv;
+disp('pxy2=');
+disp(pxy2);
+
+
